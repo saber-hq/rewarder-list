@@ -100,7 +100,6 @@ export const decorateRewarders = async (network: Network): Promise<void> => {
 
   const quarriesByMint = groupBy(allQuarries, (el) => el.token.mint);
   const quarriesByReplicaMint = groupBy(allQuarries, (el) => el.replicaMint);
-
   const rewardersByMint = mapValues(quarriesByMint, (group) =>
     group.map((g) => g.rewarder.toString())
   );
@@ -220,6 +219,8 @@ export const decorateRewarders = async (network: Network): Promise<void> => {
       )
     )
   );
+
+  await fs.writeFile(`${dir}/quarries-by-mint.json`, stringify(quarriesByMint));
 
   await fs.writeFile(
     `${dir}/all-rewarders-with-info.json`,
