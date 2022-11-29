@@ -206,7 +206,7 @@ __metadata:
     "@project-serum/anchor": ^0.23.0
     "@quarryprotocol/quarry-sdk": ^3.0.0
     "@rushstack/eslint-patch": ^1.1.1
-    "@saberhq/anchor-contrib": ^1.12.55
+    "@saberhq/anchor-contrib": ^1.14.11
     "@saberhq/eslint-config": ^1.12.55
     "@saberhq/solana-contrib": ^1.12.55
     "@saberhq/token-utils": ^1.12.55
@@ -241,20 +241,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@saberhq/anchor-contrib@npm:^1.12.55":
-  version: 1.12.55
-  resolution: "@saberhq/anchor-contrib@npm:1.12.55"
+"@saberhq/anchor-contrib@npm:^1.14.11":
+  version: 1.14.11
+  resolution: "@saberhq/anchor-contrib@npm:1.14.11"
   dependencies:
-    "@saberhq/solana-contrib": ^1.12.55
+    "@saberhq/solana-contrib": ^1.14.11
     eventemitter3: ^4.0.7
     lodash.camelcase: ^4.3.0
     lodash.mapvalues: ^4.6.0
-    tslib: ^2.3.1
+    tslib: ^2.4.0
   peerDependencies:
-    "@project-serum/anchor": ^0.22
-    "@solana/web3.js": ">=1.29.2"
+    "@project-serum/anchor": ^0.22 || ^0.23 || ^0.24
+    "@solana/web3.js": ^1.42
     bn.js: ^4 || ^5
-  checksum: 0b3b958e6d631770635dcc476de601a8fbac86d771bf65a80f48bb267020069a90a41a600648693a471c4a8ae5432a842b03acd24e813d83b9fb2e7c5a14dfa8
+  checksum: 8674bd2014eef4449e895b0d8baf30949c579fd45ae85c60b3ef902c4eee0e9f64068a1d24d7f4f266c2e32b0fec7b130c65c1364a545abfc60dc29a7f67cd04
   languageName: node
   linkType: hard
 
@@ -277,6 +277,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@saberhq/option-utils@npm:^1.14.11":
+  version: 1.14.11
+  resolution: "@saberhq/option-utils@npm:1.14.11"
+  dependencies:
+    tslib: ^2.4.0
+  checksum: b603d37a104bc3ac6e74dc6f25142d2ca945d599289c8a243875db4fd6df5ae2a0506f684a0c4cff2e2ab2e557ec4dccf9216e7584c2fa51a0353ff68b29721a
+  languageName: node
+  linkType: hard
+
 "@saberhq/solana-contrib@npm:^1.12.55":
   version: 1.12.55
   resolution: "@saberhq/solana-contrib@npm:1.12.55"
@@ -291,6 +300,25 @@ __metadata:
     "@solana/web3.js": ^1.29.2
     bn.js: ^4 || ^5
   checksum: 25a0f382c24e5f4bc071780918c374fc4b500292f4fa1059a835c5583c0ffd92ff6015beec1f5b9fb577939a4ed40826b604d7614ef50653c89c77eaa567e93e
+  languageName: node
+  linkType: hard
+
+"@saberhq/solana-contrib@npm:^1.14.11":
+  version: 1.14.11
+  resolution: "@saberhq/solana-contrib@npm:1.14.11"
+  dependencies:
+    "@saberhq/option-utils": ^1.14.11
+    "@solana/buffer-layout": ^4.0.0
+    "@types/promise-retry": ^1.1.3
+    "@types/retry": ^0.12.2
+    promise-retry: ^2.0.1
+    retry: ^0.13.1
+    tiny-invariant: ^1.3.1
+    tslib: ^2.4.0
+  peerDependencies:
+    "@solana/web3.js": ^1.42
+    bn.js: ^4 || ^5
+  checksum: 2bc52e268b4724afdf262e7bf4d5d53bc152f52877cce9154dfd1f8f90b0efc147d3caa4a3f45aae2398082b2740199bcdedfd5c6f2da5d3c54f1c7d9a3904d2
   languageName: node
   linkType: hard
 
@@ -561,6 +589,13 @@ __metadata:
   version: 0.12.1
   resolution: "@types/retry@npm:0.12.1"
   checksum: 5f46b2556053655f78262bb33040dc58417c900457cc63ff37d6c35349814471453ef511af0cec76a540c601296cd2b22f64bab1ab649c0dacc0223765ba876c
+  languageName: node
+  linkType: hard
+
+"@types/retry@npm:^0.12.2":
+  version: 0.12.2
+  resolution: "@types/retry@npm:0.12.2"
+  checksum: e5675035717b39ce4f42f339657cae9637cf0c0051cf54314a6a2c44d38d91f6544be9ddc0280587789b6afd056be5d99dbe3e9f4df68c286c36321579b1bf4a
   languageName: node
   linkType: hard
 
@@ -3753,6 +3788,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tiny-invariant@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "tiny-invariant@npm:1.3.1"
+  checksum: 872dbd1ff20a21303a2fd20ce3a15602cfa7fcf9b228bd694a52e2938224313b5385a1078cb667ed7375d1612194feaca81c4ecbe93121ca1baebe344de4f84c
+  languageName: node
+  linkType: hard
+
 "to-regex-range@npm:^5.0.1":
   version: 5.0.1
   resolution: "to-regex-range@npm:5.0.1"
@@ -3851,6 +3893,13 @@ __metadata:
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.4.0":
+  version: 2.4.1
+  resolution: "tslib@npm:2.4.1"
+  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
   languageName: node
   linkType: hard
 
